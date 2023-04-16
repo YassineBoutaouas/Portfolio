@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>GOAP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<footer id="footer" style="padding: 2em;">
+					<div class="inner">
+						<section>
+							<ul class="icons">
+								<li><a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com<span class="label"></span></a></li>
+							</ul>
+						</section>
+					</div>
+				</footer>
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="title">Projects</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+					<button name="scrollback" id="scrollback" title="Back to top"></button>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="home.html">About Me</a></li>
+							<li><a href="index.html">Projects</a></li>
+							<li style="display: flex; flex-direction: row;">
+								<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+								<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+							</li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Goal-Oriented Action Planning</h1>
+							<span class="image main"><img src="images/GOAP_Banner.png" alt="" /></span>
+							<p align = "justify">
+								This Unity project contains a solution for Goal-Oriented Action Planning AI.
+								It was developed within the scope of a bachelor thesis. The project proposes general algorithmic changes to the algorithm of GOAP
+								to improve the overall performance of the system. It further compares the differences between a natively compiled GOAP solution and
+								one that uses the job system contained in the Unity ECS.
+							</p>
+							<p align = "justify">
+								Goal-Oriented Action Planning introduces world states and goals as well as a precondition-effect schema to „generate“ procedural
+								finite state machines at runtime through the use of the A* algorithm.
+							</p>
+							<img src = "images/GOAP_Plan.png" alt="" style ="width:85%;height:85%;"/>
+							<sub>Example of a plan using the proposed backward planning model. Left to Right (Planning order), Right to Left (Execution order)</sub>
+							
+							<h3 style="margin-top: 4em;">Overview of features (Standard Solution)</h3>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Feature</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tr>
+										<td>Plan validation</td>
+										<td>Used for replanning and general problem solving.</td>
+									</tr>
+									<tr>
+										<td>Goal and world state prioritization</td>
+										<td>In a recursive goal search the algorithm selects the highest priority goal for which a plan can be found.</td>
+									</tr>
+									<tr>
+										<td>Goal and action validation</td>
+										<td>Before planning, the system rules out goals that are not valid and actions that cannot be executed.</td>
+									</tr>
+									<tr>
+										<td>Dynamic action costs</td>
+										<td>Calculates the cost of an action whenever a plan is requested.</td>
+									</tr>
+									<tr>
+										<td>Modified backward planning model</td>
+										<td>Improves the overall performance of the algorithm as shown in the figure above.</td>
+									</tr>
+									<tr>
+										<td>Generic world state design</td>
+										<td>The collection of variables stored in a world state is generic.</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="inner">
+							<h3>Example simulation</h3>
+							<p>The visual assets contained within the scene are developed by third party.</p>
+							<video src ="videos/GOAP_Sim.mp4" alt="" width ="100%"; height="100%"; controls ="controls" title="GOAP Simulation"></video>
+						</div>
+						<div class="inner" style="margin-top: 5em;">
+							<h4>To the project:</h4>
+							<blockquote><a href ="https://github.com/YassineBoutaouas/Goal-Oriented-Action-Planning">GitHub Link</a></blockquote>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Contact</h2>
+								<ul class="icons">
+									<li><a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com<span class="label"></span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -16,16 +16,15 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<footer id="footer" style="padding: 2em;">
+				<!--Top Bar-->
+				<div id="top-bar">
 					<div class="inner">
-						<section>
-							<ul class="icons">
-								<li><a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com<span class="label"></span></a></li>
-							</ul>
-						</section>
+						<a id="top-bar-icon" href="home.html" class="icon solid style2 fa-home"><span class="label">Get in touch</span></a>
+						<a id="top-bar-icon" href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+						<a id="top-bar-icon" href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+						<a id="top-bar-icon" href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
 					</div>
-				</footer>
+				</div>
 
 				<!-- Header -->
 					<header id="header">
@@ -48,17 +47,22 @@
 					<button name="scrollback" id="scrollback" title="Back to top"></button>
 
 				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="home.html">About Me</a></li>
-							<li><a href="index.html">Projects</a></li>
-							<li style="display: flex; flex-direction: row;">
-								<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
-								<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
-							</li>
-						</ul>
-					</nav>
+				<nav id="menu">
+					<h2>Menu</h2>
+					<ul>
+						<li style="display: flex; flex-direction: row;">
+							<a style="padding-right: 20%;" href="home.html">About Me</a>
+							<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+							<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+							<a href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
+						</li>
+						<li><a href="index.html">Projects</a></li>
+						<li style="text-indent: 12%;"><a href="goap.html">Goal-Oriented Action Planning</a></li>
+						<li style="text-indent: 12%;"><a href="tooldevelopment.html">Tool Development</a></li>
+						<li style="text-indent: 12%;"><a href="gameplay.html">Gameplay Programming</a></li>
+						<li style="text-indent: 12%;"><a href="crowdsimulation.html">Crowd Simulation</a></li>
+					</ul>
+				</nav>
 
 				<!-- Main -->
 					<div id="main">
@@ -67,13 +71,15 @@
 							<span class="image main"><img src="images/Tool_Banner.png" alt="" /></span>
 							<p align = "justify">
 								Since the Unity Editor does not include a proper tool with audio controls, I decided to develop an editor that provides those. 
-								In addition to audio controls, the tool also allows to create generic audio events that trigger at any given point in time, as well as different methods to configure the rhythm of an audio file.
+								In addition to audio controls, the tool also allows to create generic audio events that trigger at any given point in time, as well as different methods to calculate the rhythm of an audio track.
 								The tool was developed as an extension to the game <a href="gameplay.html">(G)raveyard - a rhythm combat game.</a>
 							</p>
 
 							<section>
 								<p align = "justify">
-									Upon creating or selecting a sound element, the editor creates a waveform and populates the window with existing events. Events are only invoked during the runtime of the game.
+									Upon creating or selecting a sound element, the editor creates a waveform and populates the window with existing events. 
+									Similar to animation events, the user is able to provide generic values that are passed to a given method. 
+									Methods with a corresponding name to the event configured in the editor are then invoked during the runtime of the game.
 								</p>
 								<section>
 									<img src = "images/SoundEditor_Create.png" alt="" style ="width:48%;height:48%;"/>
@@ -86,10 +92,10 @@
 							</section>
 
 							<table align = "justify">
-								<p style="margin-top: 5%;">To configure the rhythm of a certain audio file the editor allows to choose between two different methods (See figure below) - if the BPM is already known, it can be put in directly.</p>
+								<p style="margin-top: 5%;">To calculate the rhythm of a certain audio file, the editor allows to choose between two different methods (See figure below) - if the BPM is already known, it can be put in directly.</p>
 								<ul>
 									<li align = "justify">
-										When clicking the "Add Recording" button the system listens to the space bar. It counts the taps within a given sample duration. (See tap recorings in the figure below)
+										When clicking the "Add Recording" button the system listens to the space bar. It counts the taps within a given sample duration (See tap recorings in the figure below).
 									</li>
 									<li align = "justify">
 										The second method invokes through the "Automatic" button. It divides the audio track into bands of frequencies and compares the energy changes over a time lag. 
@@ -99,7 +105,9 @@
 							</table>
 
 							<section>
-								<p>To improve the "feel" of the rhythm the tool suggests the use of an animation curve to modify and return a value between two beats - it can be used to widen the input window.</p>
+								<p>Lastly, in order to improve the "feel" of the rhythm, the tool suggests the use of an animation curve to modify the return value between two beats - it can be used to widen the input window 
+									or to create easing for visual effects.
+								</p>
 								<img src = "images/SoundEditor_Rhythm_config.png" alt="" style ="width:50%;height:50%;"/>
 								<sub style="display: block;">Configuring the rhythm.</sub>
 							</section>
@@ -115,20 +123,13 @@
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Contact</h2>
-								<ul class="icons">
-									<li><a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com<span class="label"></span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Yassine Boutaouas. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+				<footer id="footer">
+					<div class="inner">
+						<ul class="copyright">
+							<li>&copy; Yassine Boutaouas 2023. All rights reserved</li><li>Get in touch: <a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
 
 			</div>
 

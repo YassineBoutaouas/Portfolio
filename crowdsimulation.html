@@ -20,18 +20,15 @@
 	<!-- Wrapper -->
 	<div id="wrapper">
 
-		<footer id="footer" style="padding: 2em;">
+		<!--Top Bar-->
+		<div id="top-bar">
 			<div class="inner">
-				<section>
-					<ul class="icons">
-						<li><a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span
-									class="label">GitHub</span></a></li>
-						<li><a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com<span class="label"></span></a>
-						</li>
-					</ul>
-				</section>
+				<a id="top-bar-icon" href="home.html" class="icon solid style2 fa-home"><span class="label">Get in touch</span></a>
+				<a id="top-bar-icon" href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+				<a id="top-bar-icon" href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+				<a id="top-bar-icon" href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
 			</div>
-		</footer>
+		</div>
 
 		<!-- Header -->
 		<header id="header">
@@ -57,14 +54,17 @@
 		<nav id="menu">
 			<h2>Menu</h2>
 			<ul>
-				<li><a href="home.html">About Me</a></li>
-				<li><a href="index.html">Projects</a></li>
 				<li style="display: flex; flex-direction: row;">
-					<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span
-							class="label">GitHub</span></a>
-					<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span
-							class="label">Email</span></a>
+					<a style="padding-right: 20%;" href="home.html">About Me</a>
+					<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+					<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+					<a href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
 				</li>
+				<li><a href="index.html">Projects</a></li>
+				<li style="text-indent: 12%;"><a href="goap.html">Goal-Oriented Action Planning</a></li>
+				<li style="text-indent: 12%;"><a href="tooldevelopment.html">Tool Development</a></li>
+				<li style="text-indent: 12%;"><a href="gameplay.html">Gameplay Programming</a></li>
+				<li style="text-indent: 12%;"><a href="crowdsimulation.html">Crowd Simulation</a></li>
 			</ul>
 		</nav>
 
@@ -75,72 +75,65 @@
 				<span class="image main"><img src="images/CrowdSim_Banner.png" alt="" /></span>
 				<p align="justify">
 					This project compares different approaches to realtime crowd simulation. Specifically, the project
-					focuses on comparing object-oriented approaches to data-oriented approaches.
-					To accomplish this, the project will conduct a series of experiments using Unity's Entity Component
+					focuses on comparing object-oriented approaches to data-oriented approaches (DOTS).
+					To accomplish this, the project conducts a series of experiments using Unity's Entity Component
 					System to simulate crowds of non-player characters.
 				</p>
 
 				<section>
+					<br></br>
+					<h3>An extended behavioral model</h3>
 					<p align="justify">
-						In order to run the simulation the project makes use of the three principles proposed by Craig
-						W. Reynolds (Alignment, Repulsion and Attraction) in the paper "Flocks, Herds, and Schools: A
-						Distributed Behavioral Model".
-						It further extends the behavior by embedding a pathfinding solution to provide single entities
-						with a global understanding of the area of navigation.
+						The simulation uses the behavioral model proposed by Craig W. Reynolds in "Flocks, Herds, and Schools: A
+						Distributed Behavioral Model". The simulation extends the behavior of Alignment, Repulsion and Attraction according to the publication 
+						“On the Use of Virtual Animals with Artificial Fear in Virtual Environments” by Carlos Delgado-Mata [1]. Instead of fear, the simulation uses 
+						a flow-field to provide a sophisticated and directed steering behavior, which allows agents to have shared goals.
 					</p>
+					<img src="images/CrowdSim_Model.png" width="70%" height="70%" style="display: block;"/>
+					<sub>Behavioral Model According to [1]</sub>
+
+					<br></br>
 					<section>
 						<video autoplay loop muted playsinline src="videos/CrowdSimulation.mp4" width="80%" height="80%" controls ="controls"></video>
 					</section>
 					<section class="row">
-						<sub style="margin-left: 5px; display: block;">Crowd simulation - Pathfinding combined with flocking behavior. Goal distribution not included yet.</sub>
+						<sub style="margin-left: 5px; display: block;">Crowd simulation - Pathfinding Combined with Flocking Behaviors.</sub>
 					</section>
-				</section>
+					
+					<br></br>
+					<h3>Results</h3>
+					<p>
+						Changing the programming paradigm from object-oriented programming to a data-oriented approach improves the performance of the system significantly. 
+						The complete results as well as the program archtitecture can be found in the figure below.
+					</p>
+					<embed src="images/CrowdSim_Poster_PDF.pdf" type="application/pdf" width="100%" height="800px"/>
 
-				<div class="table-wrapper">
-					<h3 style="margin-top: 5%;">Roadmap to improve the simulation</h3>
-					<p>The project is still in development. However, the program is already
-						capable to run a stable simulation that combines pathfinding with the three principles mentioned above.</p>
-					<table class="alt">
-						<tbody>
-							<tr>
-								<td>Overall improvement of performance</td>
-								<td>Using data-oriented programming and multi-threading to improve the overall performance.</td>
-							</tr>
-							<tr>
-								<td>Improvement of finding neighbors</td>
-								<td>Using Octrees and/or compute shaders to improve finding neighbor instances.</td>
-							</tr>
-							<tr>
-								<td>Density-based pathfinding</td>
-								<td>Implementing a density grid to provide further navigational intelligence.</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+
+					<sub>Complete Results of the Conducted Research</sub>
+					<br></br>
+
+					<br></br>
+					<h3>Future considerations </h3>
+					<p>
+						The crowd simulation overall will greatly benefit from the inclusion of the RVO-algorithm. It would provide agents with proper avoidance. 
+						Due to time constraints and the lacking documentation of Unity's DOTS API, the simulation at hand does not include a sophisticated avoidance behavior.
+					</p>
+					<br></br>
+				</section>
 
 			</div>
 
 			<div class="inner">
 				<h4>To the project:</h4>
-				<blockquote>GitHub Link not yet available</blockquote>
+				<blockquote>GitHub Link available soon</blockquote>
 			</div>
 		</div>
 
 		<!-- Footer -->
 		<footer id="footer">
 			<div class="inner">
-				<section>
-					<h2>Contact</h2>
-					<ul class="icons">
-						<li><a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span
-									class="label">GitHub</span></a></li>
-						<li><a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com<span class="label"></span></a>
-						</li>
-					</ul>
-				</section>
 				<ul class="copyright">
-					<li>&copy; Yassine Boutaouas. All rights reserved</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>&copy; Yassine Boutaouas 2023. All rights reserved</li><li>Get in touch: <a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 				</ul>
 			</div>
 		</footer>

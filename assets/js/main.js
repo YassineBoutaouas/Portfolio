@@ -8,6 +8,9 @@ let	scrollButton = document.getElementById("scrollback");
 window.onscroll = function() {scrollFunction()};
 scrollButton.onclick = toTopFunction;
 
+// let tocontacts = document.getElementById("tocontacts");
+// tocontacts.onclick = toBottomFunction;
+
 (function($) {
 
 	var	$window = $(window),
@@ -198,7 +201,19 @@ function scrollFunction(){
 	  }
 }
 
+// function scrollToContacts(){
+// 	if((document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) && window.scrollY + window.innerHeight < document.body.scrollHeight) {
+// 		tocontacts.style.display = "block";
+// 	} else {
+// 	tocontacts.style.display = "none";
+// 	}
+// }
+
 function toTopFunction(){
 	document.body.scrollTop = 0;
   	document.documentElement.scrollTop = 0;
 }
+
+//function toBottomFunction(){
+//	window.scrollTo(0, document.body.scrollHeight);
+//}

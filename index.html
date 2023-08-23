@@ -16,58 +16,62 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-				<footer id="footer" style="padding: 2em;">
+				<!--Top Bar-->
+				<div id="top-bar">
 					<div class="inner">
-						<section>
-							<ul class="icons">
-								<li><a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com<span class="label"></span></a></li>
-							</ul>
-						</section>
+						<a id="top-bar-icon" href="home.html" class="icon solid style2 fa-home"><span class="label">Get in touch</span></a>
+						<a id="top-bar-icon" href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+						<a id="top-bar-icon" href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+						<a id="top-bar-icon" href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
 					</div>
-				</footer>
-				
-					<header id="header">
-						<div class="inner">
+				</div>
 
-							<!-- Logo <span class="symbol"><img src="images/logo.svg" alt="" /></span>-->
-								<a href="index.html" class="logo">
-									<span class="title">Yassine Boutaouas (BA.)</span>
-								</a>
+				<header id="header">
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+					<div class="inner">
 
-						</div>
-					</header>
+							<a href="index.html" class="logo">
+								<span class="title">Yassine Boutaouas (BA.)</span>
+							</a>
+
+						<!-- Navigation Button -->
+							<nav>
+								<ul>
+									<li><a href="#menu">Menu</a></li>
+								</ul>
+							</nav>
+					</div>
+				</header>
+
+					<!-- Fixed Buttons -->
+					<!-- <button name="tocontacts" id="tocontacts" title="To Contacts" class="icon solid style2 fa-envelope-open"></button> -->
 					<button name="scrollback" id="scrollback" title="Back to top"></button>
 
 				<!-- Menu -->
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="home.html">About Me</a></li>
-							<li><a href="index.html">Projects</a></li>
 							<li style="display: flex; flex-direction: row;">
-								<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+								<a style="padding-right: 20%;" href="home.html">About Me</a>
 								<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+								<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+								<a href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
 							</li>
+							<li><a href="index.html">Projects</a></li>
+							<li style="text-indent: 12%;"><a href="goap.html">Goal-Oriented Action Planning</a></li>
+							<li style="text-indent: 12%;"><a href="tooldevelopment.html">Tool Development</a></li>
+							<li style="text-indent: 12%;"><a href="gameplay.html">Gameplay Programming</a></li>
+							<li style="text-indent: 12%;"><a href="crowdsimulation.html">Crowd Simulation</a></li>
 						</ul>
 					</nav>
-
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
 							<header>
 								<h1>Portfolio.</h1>
 								<p align="justify">
-									This page contains a collection of relevant projects. A description of each project is provided along with links to GitHub repositories. 
-									If you want to read more about me, you can do so on the <a href="home.html">About me sub-page.</a>
+									This page contains a collection of relevant projects. A description of each project is provided along with links to GitHub
+									repositories. If you want to read more about me, you can do so on the <a href="home.html">About me sub-page.</a>
 								</p>
 							</header>
 							<section class="tiles">
@@ -115,9 +119,9 @@
 										<img src="images/CrowdSim_Pic.png" alt="" />
 									</span>
 									<a href="crowdsimulation.html">
-										<h2>Realtime Crowd Simulation (Still in development)</h2>
+										<h2>Realtime Crowd Simulation</h2>
 										<div class="content">
-											<p>Comparison and implementation of different approaches to realtime crowd simulation. Still in development.</p>
+											<p>Comparison and implementation of different approaches to realtime crowd simulation.</p>
 										</div>
 									</a>
 								</article>
@@ -127,20 +131,13 @@
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Contacts</h2>
-								<ul class="icons">
-									<li><a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com<span class="label"></span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Yassine Boutaouas. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+				<footer id="footer">
+					<div class="inner">
+						<ul class="copyright">
+							<li>&copy; Yassine Boutaouas 2023. All rights reserved</li><li>Get in touch: <a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
 
 			</div>
 
@@ -150,6 +147,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/components.js"></script>
 
 	</body>
 </html>

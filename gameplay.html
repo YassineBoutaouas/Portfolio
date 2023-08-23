@@ -16,16 +16,15 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<footer id="footer" style="padding: 2em;">
+				<!--Top Bar-->
+				<div id="top-bar">
 					<div class="inner">
-						<section>
-							<ul class="icons">
-								<li><a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-								<li><a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com<span class="label"></span></a></li>
-							</ul>
-						</section>
+						<a id="top-bar-icon" href="home.html" class="icon solid style2 fa-home"><span class="label">Get in touch</span></a>
+						<a id="top-bar-icon" href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+						<a id="top-bar-icon" href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+						<a id="top-bar-icon" href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
 					</div>
-				</footer>
+				</div>
 
 				<!-- Header -->
 					<header id="header">
@@ -48,17 +47,22 @@
 					<button name="scrollback" id="scrollback" title="Back to top"></button>
 
 				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="home.html">About Me</a></li>
-							<li><a href="index.html">Projects</a></li>
-							<li style="display: flex; flex-direction: row;">
-								<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
-								<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
-							</li>
-						</ul>
-					</nav>
+				<nav id="menu">
+					<h2>Menu</h2>
+					<ul>
+						<li style="display: flex; flex-direction: row;">
+							<a style="padding-right: 20%;" href="home.html">About Me</a>
+							<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+							<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+							<a href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
+						</li>
+						<li><a href="index.html">Projects</a></li>
+						<li style="text-indent: 12%;"><a href="goap.html">Goal-Oriented Action Planning</a></li>
+						<li style="text-indent: 12%;"><a href="tooldevelopment.html">Tool Development</a></li>
+						<li style="text-indent: 12%;"><a href="gameplay.html">Gameplay Programming</a></li>
+						<li style="text-indent: 12%;"><a href="crowdsimulation.html">Crowd Simulation</a></li>
+					</ul>
+				</nav>
 
 				<!-- Main -->
 					<div id="main">
@@ -67,14 +71,14 @@
 							<span class="image main"><img src="images/Gameplay_Banner.png" alt="" /></span>
 							
 							<p align="justify">
-								The following projects were developed in groups of four with me as a solo programmer. Therefore the visual assets seen below were not developed by me. The development time was about three months long for each project.
+								The following projects were developed in groups of four with me as a solo programmer. The development time was about three months long for each project. The visual assets seen below were not developed by me.
 							</p>
 
 							<h4>Beat detection and Combat</h4>
 							<p align = "justify">
-								(G)raveyard is a rythm based combat game developed for PC. The combat within the game is beat dependend. 
-								To evaluate the timing, the game utilizes animation curves and routines. 
-								The beat detection can be improved by <a href ="tooldevelopment.html">utilizing this tool that I have developed </a>after the submission of the project.
+								(G)raveyard is a rythm based combat game developed for PC. Gameplay elements, the combat specifically, are beat dependent. 
+								Since the game has only one soundtrack and one continuous rhythm, the game implements a simple timer to evaluate the on-beat-ness. 
+								A more sophisticated beat detection is provided by <a href ="tooldevelopment.html">this tool that I have developed </a>after the submission of the project.
 							</p>
 							<p align = "justify">
 								Depending on the on-beat-ness of the attacks the player character has different recovery times and deals more or less damage. 
@@ -98,7 +102,7 @@
 							</section>
 							<sub>State machine using weighted randomization - Vitreus.</sub>
 							
-							<h4 style="margin-top: 5em">Further Examples</h4>
+							<h4 style="margin-top: 5em">Further Examples of gameplay systems</h4>
 							<section>
 								<video autoplay loop muted playsinline src="videos/UIAndDialogue.mp4" width="48%" height="48%" controls ="controls"></video>
 								<video autoplay loop muted playsinline src="videos/Unfold.mp4" width="48%" height="48%" controls="controls"></video>
@@ -112,29 +116,22 @@
 						<div class="inner">
 							<h4 style="margin-top: 5em;">To the project:</h4>
 							<blockquote>
-								<br hidden>
+								<!-- <br hidden>
 									<a href ="https://github.com/YassineBoutaouas/Graveyard">(G)raveyard - GitHub</a>
-								</br>
+								</br> -->
 									<a href ="https://drive.google.com/file/d/1bzefD9Ny1B7jrw_80UMpbB7UpQsgcsMD/view?usp=sharing">(G)raveyard - Build</a>
 							</blockquote>
 						</div>
 					</div>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<div class="inner">
-							<section>
-								<h2>Contact</h2>
-								<ul class="icons">
-									<li><a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com<span class="label"></span></a></li>
-								</ul>
-							</section>
-							<ul class="copyright">
-								<li>&copy; Yassine Boutaouas. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</footer>
+				<footer id="footer">
+					<div class="inner">
+						<ul class="copyright">
+							<li>&copy; Yassine Boutaouas 2023. All rights reserved</li><li>Get in touch: <a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
 
 			</div>
 

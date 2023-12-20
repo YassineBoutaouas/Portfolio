@@ -70,13 +70,12 @@
 							<h1>Goal-Oriented Action Planning</h1>
 							<span class="image main"><img src="images/GOAP_Banner.png" alt="" /></span>
 							<p align = "justify">
-								This project contains a solution for a Goal-Oriented Action Planning AI (GOAP).
+								This project contains a multi-project-solution for a Goal-Oriented Action Planning AI (GOAP) developed with C++ 17. 
 								It was developed within the scope of a bachelor thesis. The project proposes general algorithmic changes to GOAP
-								to improve the overall performance of the system. It further compares the differences between a natively compiled GOAP solution and
-								one that uses the multi-threaded job system contained in the Unity Entity-Component-System.
+								to improve the overall performance of the system.
 							</p>
 							<p align = "justify">
-								Goal-Oriented Action Planning introduces actions, world states and goals, which are essentially a collection of key-value-pairs, as well as a precondition-effect schema to „generate“ procedural
+								Goal-Oriented Action Planning introduces actions, world states and goals (a collection of key-value pairs), as well as a precondition-effect schema to „generate“ procedural
 								finite state machines at runtime through the use of the A* algorithm.
 							</p>
 							<img src = "images/GOAP_Plan.png" alt="" style ="width:85%;height:85%;"/>
@@ -85,21 +84,15 @@
 							<p>
 								<br>
 									The algorithm starts to look for an action that would satisfy the goal (In this case the goal consists of the variable "IsPlayerDead" : True).
-									The example shown in the figure above assumes that the precondition for the shoot action is already satisfied by the world state, 
+									The example shown in the figure above assumes that the precondition (HasGun == true) for the shoot action is already satisfied by the world state, 
 									showing that the system considers the world state during each step of the planning phase.
 									Each action has a cost, so that the algorithm is able to find the cheapest sequence of actions that would satisfy a goal.
 								</br>
 							</p>
 
-							<h3 style="margin-top: 4em;">Overview</h3>
+							<h3>Functional Overview</h3>
 							<div class="table-wrapper">
 								<table class="alt">
-									<thead>
-										<tr>
-											<th>Feature</th>
-											<th>Description</th>
-										</tr>
-									</thead>
 									<tr>
 										<td>Plan validation</td>
 										<td>Used for replanning and general problem solving.</td>
@@ -118,7 +111,7 @@
 									</tr>
 									<tr>
 										<td>Modified backward planning model</td>
-										<td>Improves the overall performance of the algorithm as shown in the figure above.</td>
+										<td>(As shown above) Improves the overall performance of the algorithm.</td>
 									</tr>
 									<tr>
 										<td>A* search</td>
@@ -129,15 +122,19 @@
 						</div>
 						<div class="inner">
 							<h3>Example simulation</h3>
-							<p>The visual assets contained within the scene are developed by third party.</p>
-							<video src ="videos/GOAP_Sim.mp4" alt="" width ="100%"; height="100%"; controls ="controls" title="GOAP Simulation"></video>
+							<p>The visual assets seen below are developed by third party.</p>
+							<video src ="videos/GOAP_Sim.mp4" width ="60%"; height="60%"; controls ="controls" title="GOAP Simulation"></video>
 							<section class="row">
-								<sub style="margin-left: 5px; display: block;">Example simulation containing multiple goals and plans.</sub>
+								<sub style="margin-left: 10px; display: block;">Example simulation containing multiple goals and plans prototyped in the Unity Engine.</sub>
 							</section>
+							<img src="images/GOAP_CPP.png" width="100%" height="100%"/>
+							<sub style="display: block;">Screenshot of the working C++ application. Current plan highlighted yellow.</sub>
+							
 						</div>
+
 						<div class="inner" style="margin-top: 5em;">
 							<h4>To the project:</h4>
-							<blockquote><a href ="https://github.com/YassineBoutaouas/Goal-Oriented-Action-Planning">GitHub Link</a></blockquote>
+							<blockquote><a href ="https://github.com/YassineBoutaouas/GOAP_Project">GitHub Link</a></blockquote>
 						</div>
 					</div>
 

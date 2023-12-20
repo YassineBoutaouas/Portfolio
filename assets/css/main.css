@@ -3414,6 +3414,30 @@ input, select, textarea {
 			margin-right: 2em;
 		}
 
+		.article-tag{
+			z-index: 10000;
+			
+			display: inline-block;
+			position:absolute;
+			bottom:0.5em;
+			left:0em;
+		}
+		
+		
+		.article-tag-img {
+			background-color: transparent;
+			opacity:0.5;
+			-moz-transition: opacity 0.2s ease;
+
+			width: 3em;
+			height: 3em;
+		}
+
+		.tiles article:hover > .image > .article-tag > .article-tag-img{
+			opacity: 1;
+			-moz-transition: opacity 0.2s ease;
+		}
+
 /* Wrapper */
 
 	#wrapper > * > .inner {

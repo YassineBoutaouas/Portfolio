@@ -75,8 +75,8 @@
 								to improve the overall performance of the system.
 							</p>
 							<p align = "justify">
-								Goal-Oriented Action Planning introduces actions, world states and goals (a collection of key-value pairs), as well as a precondition-effect schema to „generate“ procedural
-								finite state machines at runtime through the use of the A* algorithm.
+								Goal-Oriented Action Planning introduces actions, world states and goals, as well as a precondition-effect schema to „generate“ procedural
+								finite state machines at runtime through the use of the A* algorithm <a href="https://www.gdcvault.com/play/1022019/Goal-Oriented-Action-Planning-Ten">[1]</a>.
 							</p>
 							<img src = "images/GOAP_Plan.png" alt="" style ="width:85%;height:85%;"/>
 							<sub>Example of a plan using the proposed backward planning model. Left to Right (Planning order), Right to Left (Execution order).</sub>
@@ -84,11 +84,13 @@
 							<p>
 								<br>
 									The algorithm starts to look for an action that would satisfy the goal (In this case the goal consists of the variable "IsPlayerDead" : True).
-									The example shown in the figure above assumes that the precondition (HasGun == true) for the shoot action is already satisfied by the world state, 
+									The example shown in the figure above assumes that the precondition ("HasGun" : True) for the shoot action is already satisfied by the world state, 
 									showing that the system considers the world state during each step of the planning phase.
 									Each action has a cost, so that the algorithm is able to find the cheapest sequence of actions that would satisfy a goal.
 								</br>
 							</p>
+
+							<div class="ability-diviser"></div>
 
 							<h3>Functional Overview</h3>
 							<div class="table-wrapper">
@@ -121,6 +123,7 @@
 							</div>
 						</div>
 						<div class="inner">
+							<br></br>
 							<h3>Example simulation</h3>
 							<p>The visual assets seen below are developed by third party.</p>
 							<video src ="videos/GOAP_Sim.mp4" width ="60%"; height="60%"; controls ="controls" title="GOAP Simulation"></video>

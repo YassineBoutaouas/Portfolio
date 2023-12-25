@@ -5,16 +5,25 @@
 */
 
 let	scrollButton = document.getElementById("scrollback");
+let projectsButton = document.getElementById("checkbox-projects");
+let abilitiesButton = document.getElementById("checkbox-abilities");
+
+var $projectstab = document.getElementById("projects-tab");
+var $abilitiestab = document.getElementById("abilities-tab");
+
 window.onscroll = function() {scrollFunction()};
 scrollButton.onclick = toTopFunction;
 
-// let tocontacts = document.getElementById("tocontacts");
-// tocontacts.onclick = toBottomFunction;
+if(projectsButton !== null)
+	projectsButton.onclick = toggleProjects;
+if(abilitiesButton !== null)
+	abilitiesButton.onclick = toggleAbilities;
 
 (function($) {
 
 	var	$window = $(window),
 		$body = $('body');
+
 
 	// Breakpoints.
 		breakpoints({
@@ -201,19 +210,29 @@ function scrollFunction(){
 	  }
 }
 
-// function scrollToContacts(){
-// 	if((document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) && window.scrollY + window.innerHeight < document.body.scrollHeight) {
-// 		tocontacts.style.display = "block";
-// 	} else {
-// 	tocontacts.style.display = "none";
-// 	}
-// }
-
 function toTopFunction(){
 	document.body.scrollTop = 0;
   	document.documentElement.scrollTop = 0;
 }
 
-//function toBottomFunction(){
-//	window.scrollTo(0, document.body.scrollHeight);
-//}
+function toggleProjects(){
+	if($projectstab.style.display === 'flex')
+		return;
+	
+	projectsButton.classList.add("toggle-button-active");
+	abilitiesButton.classList.remove("toggle-button-active");
+	
+	$projectstab.style.display = 'flex';
+	$abilitiestab.style.display = 'none';
+}
+
+function toggleAbilities(){
+	if($projectstab.style.display === 'none')
+	return;
+
+	abilitiesButton.classList.add("toggle-button-active");
+	projectsButton.classList.remove("toggle-button-active");
+
+	$projectstab.style.display = 'none';
+	$abilitiestab.style.display = 'flex';
+}

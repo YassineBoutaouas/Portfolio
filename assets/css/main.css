@@ -3235,6 +3235,9 @@ input, select, textarea {
 /* Footer */
 
 	#footer {
+		bottom: 0em;
+		right: 0em;
+		left:0em;
 		padding: 0em 0 0em 0;
 		background-color: var(--footer-background-color);
 		align-items: center;
@@ -3415,7 +3418,7 @@ input, select, textarea {
 		}
 
 		.article-tag{
-			z-index: 10000;
+			z-index: 9999;
 			
 			display: inline-block;
 			position:absolute;
@@ -3426,11 +3429,11 @@ input, select, textarea {
 		
 		.article-tag-img {
 			background-color: transparent;
-			opacity:0.5;
+			opacity:0.4;
 			-moz-transition: opacity 0.2s ease;
 
-			width: 3em;
-			height: 3em;
+			width: 2.5em;
+			height: 2.5em;
 		}
 
 		.tiles article:hover > .image > .article-tag > .article-tag-img{
@@ -3453,3 +3456,61 @@ input, select, textarea {
 				padding: 0 1.25em;
 			}
 		}
+
+#abilities-tab{
+	display:none;
+	flex-direction: column;
+	margin-top: 3em;
+}
+
+.toggle-button-active{
+	background-color: #585858;
+	color: var(--hr-element) !important;
+}
+
+#checkbox-abilities{
+	border-radius: 0px 4px 4px 0px;
+	width: 12em;
+}
+
+#checkbox-projects{
+	border-radius: 4px 0px 0px 4px;
+	width: 12em;
+}
+
+.ability{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 1em;
+}
+
+.ability-diviser{
+	background-color: var(--border-color);
+	height: 1px;
+	width: 100%;
+	display: flex;
+	margin-top: 1em;
+	margin-bottom: 3em;
+}
+
+.ability-label{
+	position: relative;
+	width: 14em;
+	font-weight: 400;
+	margin-bottom: 1em;
+}
+
+.progress-bar-outer{
+	margin-left: 2em;
+	background-color: var(--box-shadow-color);
+	outline: 1px solid var(--hover-color);
+	border-radius: 8px;
+	height:1.5em;
+	width:40em;
+}
+
+.progress-bar-outer > .progress-bar-inner{
+	height:inherit;
+	border-radius: inherit;
+	background-color: var(--hyperlink-border);
+}

@@ -2756,7 +2756,8 @@ input, select, textarea {
 			}
 
 			.tiles article.style3 > .image:before {
-				background-color: #EDAE49;
+				/* background-color: #EDAE49; */
+				background-color: #545454;
 			}
 
 			.tiles article.style4 > .image:before {
@@ -3518,4 +3519,12 @@ input, select, textarea {
 #goap-uml{
 	overflow-y: scroll;
 	overflow-x: scroll;
+}
+
+.expandable-img{
+	transition: transform .2s;
+}
+
+.expandable-img:hover{
+	transform: scale(1.3);
 }

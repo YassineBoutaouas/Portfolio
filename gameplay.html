@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Gameplay Programming</title>
+		<title>Gameplay & Tool Programming</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -58,7 +58,7 @@
 						</li>
 						<li><a href="index.html">Projects</a></li>
 						<li style="text-indent: 12%;"><a href="goap.html">Goal-Oriented Action Planning</a></li>
-						<li style="text-indent: 12%;"><a href="tooldevelopment.html">Tool Development</a></li>
+						<li style="text-indent: 12%;"><a href="#">Still in work.</a></li>
 						<li style="text-indent: 12%;"><a href="gameplay.html">Gameplay Programming</a></li>
 						<li style="text-indent: 12%;"><a href="crowdsimulation.html">Crowd Simulation</a></li>
 					</ul>
@@ -67,58 +67,83 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Gameplay Programming</h1>
+							<h1>Gameplay & Tool Programming</h1>
 							<span class="image main"><img src="images/Gameplay_Banner.png" alt="" /></span>
-							
-							<p align="justify">
-								The following projects were developed in groups of four with me as a solo programmer. The development time was about three months long for each project. The visual assets seen below were not developed by me.
-							</p>
 
-							<h4>Beat detection and Combat</h4>
+							<h3>Beat detection and Combat</h3>
 							<p align = "justify">
-								(G)raveyard is a rythm based combat game developed for PC. Gameplay elements, the combat specifically, are beat dependent. 
-								Since the game has only one soundtrack and one continuous rhythm, the game implements a simple timer to evaluate the on-beat-ness. 
-								A more sophisticated beat detection is provided by <a href ="tooldevelopment.html">this tool that I have developed </a>after the submission of the project.
-							</p>
-							<p align = "justify">
-								Depending on the on-beat-ness of the attacks the player character has different recovery times and deals more or less damage. 
+								(G)raveyard is a rythm based combat game developed for PC. Gameplay elements, the combat specifically, are beat dependent.
+								It was developed in a group of four with me as the primary programmer. Among other things my contributions include the enemy-AI, beat detection, player controls, combat, UI and event systems.
+							<br></br>
+								Depending on the on-beat-ness of the attacks the player character has different recovery times and deals more or less damage.
 								The game allows to choose between a freeflow combat system and a normal one.
 							</p>
 
 							<section class="row">
-								<img src="images/Graveyard_Beatdetection.PNG" width="50%" height="50%" style="display: block;"/>
-								<img src="images/Graveyard_Beatdetection_2.PNG" width="50%" height="50%" style="display: block;"/>
+								<img class="expandable-img" src="images/Graveyard_Beatdetection.PNG" width="50%" height="50%" style="display: block;"/>
+								<img class="expandable-img" src="images/Graveyard_Beatdetection_2.PNG" width="50%" height="50%" style="display: block;"/>
 								<sub>  Ingame screenshots.</sub>
 							</section>
 
-							<h4 style="margin-top: 3em">Enemy AI</h4>
-							<p align="justify">
-								The enemies within the game (G)raveyard use a simple Finite-State-Machine. 
-								To make it as modular as possible they use weighted randomization to choose between different patterns and attacks. 
-								A similar solution was used for the boss AI within the game Vitreus.
-							</p>
-							<section>
-								<video src ="videos/Vitreus.mp4" alt="" width ="65%"; height="65%"; controls ="controls" title="Enemy AI and Combat System"></video>
-							</section>
-							<sub>State machine using weighted randomization - Vitreus.</sub>
+							<div class="ability-diviser"></div>
+
+							<h3>Creating tools to aid the process</h3>
 							
-							<h4 style="margin-top: 5em">Further Examples of gameplay systems</h4>
 							<section>
-								<video autoplay loop muted playsinline src="videos/UIAndDialogue.mp4" width="48%" height="48%" controls ="controls"></video>
-								<video autoplay loop muted playsinline src="videos/Unfold.mp4" width="48%" height="48%" controls="controls"></video>
-							</section>
-							<section class="row">
-								<sub style="margin-left: 5px; display: block;">In-Engine Branching Dialogue and Event System (Including editor).</sub>
-								<sub style="margin-left: 11%; display: block;">Platforming mechanics and character controls.</sub>
+								<p align = "justify">
+									To help with the process I created an audio tool which provides simple controls, allows to configure the rythm as well as to create generic audio events (Similar to animation events).
+								<br></br>
+									Upon creating or selecting a sound element, the editor creates a waveform and populates the window with existing events.
+									Each event consists of a method name and a set of generic values.
+									Methods with a corresponding name to the event configured in the editor are then invoked during the runtime of the game.
+								</p>
+								<section>
+									<img class="expandable-img" src = "images/SoundEditor_Create.png" alt="" style ="width:48%;height:48%;"/>
+									<img class="expandable-img" src = "images/SoundEditor_Events.png" alt="" style ="width:48%;height:48%;"/>
+								</section>
+								<section class="row">
+									<sub style="margin-left: 5px; display: block;">Creation of a sound element.</sub>
+									<sub style="margin-left: 31%; display: block;">Authoring events in the editor.</sub>
+								</section>
 							</section>
 
+								<div class="ability-diviser"></div>
+
+								<table class="alt">
+									<h3>Approximating the BPM</h3>
+									<tbody>
+										<tr>
+											<td style="width: 10em;">Tap recordings</td>
+											<td>Invoked through "Add Recording". Counts the space-bar-button presses over a given sample duration.</td>
+										</tr>
+										<tr>
+											<td style="width: 10m;">Automatic</td>
+											<td>Divides the audio track into bands of frequencies. Compares the energy changes over a time lag. 
+												(Works better the more emphasized the rhythm is)</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td style="padding-top:0px; width: 5em; font-size: 90%;">(See figure below)</td>
+										</tr>
+									</tfoot>
+								</table>
+
+							<section>
+								<p>To improve the "feel" of the rhythm, the tool suggests the use of an animation curve to modify the return value between two beats - it can be used to widen the input window 
+									or to create easing for visual effects.
+								</p>
+								<img class="expandable-img" src = "images/SoundEditor_Rhythm_config.png" alt="" style ="width:50%;height:50%;"/>
+								<sub style="display: block;">Configuring the rhythm.</sub>
+							</section>
 						</div>
+
 						<div class="inner">
 							<h4 style="margin-top: 5em;">To the project:</h4>
 							<blockquote>
-								<!-- <br hidden>
-									<a href ="https://github.com/YassineBoutaouas/Graveyard">(G)raveyard - GitHub</a>
-								</br> -->
+								<br hidden>
+									<a href ="https://github.com/YassineBoutaouas/BeatDetection">Beat Detection - GitHub</a>
+								</br>
 									<a href ="https://drive.google.com/file/d/1bzefD9Ny1B7jrw_80UMpbB7UpQsgcsMD/view?usp=sharing">(G)raveyard - Build</a>
 							</blockquote>
 						</div>

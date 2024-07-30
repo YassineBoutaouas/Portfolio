@@ -46,23 +46,23 @@
 					</header>
 					<button name="scrollback" id="scrollback" title="Back to top"></button>
 
-				<!-- Menu -->
-				<nav id="menu">
-					<h2>Menu</h2>
-					<ul>
-						<li style="display: flex; flex-direction: row;">
-							<a style="padding-right: 20%;" href="home.html">About Me</a>
-							<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
-							<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
-							<a href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
-						</li>
-						<li><a href="index.html">Projects</a></li>
-						<li style="text-indent: 12%;"><a href="goap.html">Goal-Oriented Action Planning</a></li>
-						<li style="text-indent: 12%;"><a href="#">Work in progress</a></li>
-						<li style="text-indent: 12%;"><a href="gameplay.html">Gameplay Programming</a></li>
-						<li style="text-indent: 12%;"><a href="crowdsimulation.html">Crowd Simulation</a></li>
-					</ul>
-				</nav>
+					<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li style="display: flex; flex-direction: row;">
+								<a style="padding-right: 20%;" href="home.html">About Me</a>
+								<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+								<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+								<a href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
+							</li>
+							<li><a href="index.html">Projects</a></li>
+							<li style="text-indent: 12%;"><a href="goap.html">Goal-Oriented Action Planning</a></li>
+							<li style="text-indent: 12%;"><a href="renderengine.html">3D Render Engine</a></li>
+							<li style="text-indent: 12%;"><a href="crowdsimulation.html">Crowd Simulation</a></li>
+							<li style="text-indent: 12%;"><a href="gameplay.html">Gameplay Programming</a></li>
+						</ul>
+					</nav>
 
 				<!-- Main -->
 					<div id="main">
@@ -86,57 +86,49 @@
 									The algorithm starts to look for an action that would satisfy the goal (In this case the goal consists of the variable "IsPlayerDead" : True).
 									The example shown in the figure above assumes that the precondition ("HasGun" : True) for the shoot action is already satisfied by the world state, 
 									showing that the system considers the world state during each step of the planning phase.
-									Each action has a cost, so that the algorithm is able to find the cheapest sequence of actions that would satisfy a goal.
+									Each action has a cost, so that the algorithm is able to find the cheapest sequence of actions that would satisfy a goal. If there is no plan for the 
+									current most important goal, the system chooses the next most important one.
 								</br>
 							</p>
 
 							<div class="ability-diviser"></div>
 
 							<h3>Overview</h3>
-							
-							<div class="table-wrapper">
-								<table class="alt">
-									<tr>
-										<td>Plan validation</td>
-										<td>Used for replanning and general problem solving.</td>
-									</tr>
-									<tr>
-										<td>Goal and world state prioritization</td>
-										<td>In a recursive goal search the algorithm selects the highest priority goal for which a plan can be found.</td>
-									</tr>
-									<tr>
-										<td>Goal and action validation</td>
-										<td>Before planning, the system rules out goals that are not valid and actions that cannot be executed.</td>
-									</tr>
-									<tr>
-										<td>Dynamic action costs</td>
-										<td>Calculates the cost of an action whenever a plan is requested.</td>
-									</tr>
-									<tr>
-										<td>Modified backward planning model</td>
-										<td>(As shown above) Improves the overall performance of the algorithm.</td>
-									</tr>
-									<tr>
-										<td>A* search</td>
-										<td>The system uses A* to find sequences of actions that would satisfy a given goal (See figure above).</td>
-									</tr>
-								</table>
-							</div>
 							<embed id="goap-uml" src="images/goap-uml.pdf" type="application/pdf" width="100%" height="800px"/>
-							<sub>Complete UML diagram</sub>
+							<sub>Complete UML diagram.</sub>
+							<div class="ability-diviser"></div>
 
 						</div>
 						<div class="inner">
-							<br></br>
 							<h3>Example simulation</h3>
-							<p>The visual assets seen below are developed by third party.</p>
 							<video src ="videos/GOAP_Sim.mp4" width ="60%"; height="60%"; controls ="controls" title="GOAP Simulation"></video>
 							<section class="row">
 								<sub style="margin-left: 10px; display: block;">Example simulation containing multiple goals and plans prototyped in the Unity Engine.</sub>
 							</section>
-							<img src="images/GOAP_CPP.png" width="100%" height="100%"/>
+							<div class="ability-diviser"></div>
+							<img src="images/GOAP_CPP.png" width="85%" height="85%"/>
 							<sub style="display: block;">Screenshot of the working C++ application. Current plan highlighted yellow.</sub>
-							
+						</div>
+
+						<div class="inner">
+							<div class="ability-diviser"></div>
+							<button type="button" class="collapsible">Third party assets</button>
+								<div class="collapsible-content">
+									<table class="alt">
+										<tr>
+											<td><a href="https://www.sfml-dev.org/">[1]</a> SMFL - Graphics Library</td>
+										</tr>
+										<tr>
+											<td><a href="https://brullov.itch.io/oak-woods">[2]</a> Oak Woods - Environment and Character Sprite</td>
+										</tr>
+										<tr>
+											<td><a href="https://www.dafont.com/de/vcr-osd-mono.font">[3]</a> Font Asset</td>
+										</tr>
+										<tr>
+											<td><a href="https://assetstore.unity.com/packages/3d/environments/fantasy/polygon-vikings-low-poly-3d-art-by-synty-85664">[4]</a> Polygon - Vikings Pack - Unity Visualization</td>
+										</tr>
+									</table>
+								</div>
 						</div>
 
 						<div class="inner" style="margin-top: 5em;">
@@ -149,7 +141,7 @@
 				<footer id="footer">
 					<div class="inner">
 						<ul class="copyright">
-							<li>&copy; Yassine Boutaouas 2023. All rights reserved</li><li>Get in touch: <a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Yassine Boutaouas 2024. All rights reserved</li><li>Get in touch: <a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</div>
 				</footer>

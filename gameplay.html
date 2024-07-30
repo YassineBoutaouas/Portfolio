@@ -46,23 +46,23 @@
 					</header>
 					<button name="scrollback" id="scrollback" title="Back to top"></button>
 
-				<!-- Menu -->
-				<nav id="menu">
-					<h2>Menu</h2>
-					<ul>
-						<li style="display: flex; flex-direction: row;">
-							<a style="padding-right: 20%;" href="home.html">About Me</a>
-							<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
-							<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
-							<a href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
-						</li>
-						<li><a href="index.html">Projects</a></li>
-						<li style="text-indent: 12%;"><a href="goap.html">Goal-Oriented Action Planning</a></li>
-						<li style="text-indent: 12%;"><a href="#">Work in progress</a></li>
-						<li style="text-indent: 12%;"><a href="gameplay.html">Gameplay Programming</a></li>
-						<li style="text-indent: 12%;"><a href="crowdsimulation.html">Crowd Simulation</a></li>
-					</ul>
-				</nav>
+					<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li style="display: flex; flex-direction: row;">
+								<a style="padding-right: 20%;" href="home.html">About Me</a>
+								<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+								<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+								<a href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
+							</li>
+							<li><a href="index.html">Projects</a></li>
+							<li style="text-indent: 12%;"><a href="goap.html">Goal-Oriented Action Planning</a></li>
+							<li style="text-indent: 12%;"><a href="renderengine.html">3D Render Engine</a></li>
+							<li style="text-indent: 12%;"><a href="crowdsimulation.html">Crowd Simulation</a></li>
+							<li style="text-indent: 12%;"><a href="gameplay.html">Gameplay Programming</a></li>
+						</ul>
+					</nav>
 
 				<!-- Main -->
 					<div id="main">
@@ -79,17 +79,17 @@
 								The game allows to choose between a freeflow combat system and a normal one.
 							</p>
 
-							<section class="row">
+							<div class="row">
 								<img class="expandable-img" src="images/Graveyard_Beatdetection.PNG" width="50%" height="50%" style="display: block;"/>
 								<img class="expandable-img" src="images/Graveyard_Beatdetection_2.PNG" width="50%" height="50%" style="display: block;"/>
 								<sub>  Ingame screenshots.</sub>
-							</section>
+							</div>
 
 							<div class="ability-diviser"></div>
 
 							<h3>Creating tools to aid the process</h3>
 							
-							<section>
+							<div>
 								<p align = "justify">
 									To help with the process I created an audio tool which provides simple controls, allows to configure the rythm as well as to create generic audio events (Similar to animation events).
 								<br></br>
@@ -97,45 +97,46 @@
 									Each event consists of a method name and a set of generic values.
 									Methods with a corresponding name to the event configured in the editor are then invoked during the runtime of the game.
 								</p>
-								<section>
-									<img class="expandable-img" src = "images/SoundEditor_Create.png" alt="" style ="width:48%;height:48%;"/>
-									<img class="expandable-img" src = "images/SoundEditor_Events.png" alt="" style ="width:48%;height:48%;"/>
-								</section>
-								<section class="row">
-									<sub style="margin-left: 5px; display: block;">Creation of a sound element.</sub>
-									<sub style="margin-left: 31%; display: block;">Authoring events in the editor.</sub>
-								</section>
-							</section>
+								<div class="row">
+									<img class="expandable-img" src = "images/SoundEditor_Create.png" alt="" style ="width:50%;height:50%;display: block;"/>
+									<img class="expandable-img" src = "images/SoundEditor_Events.png" alt="" style ="width:50%;height:50%;display: block;"/>
+									<sub style="margin-left: 5px;">Creation of a sound element.</sub>
+									<sub style="margin-left: 33%;">Authoring events in the editor.</sub>
+								</div>
+							</div>
 
-								<div class="ability-diviser"></div>
+							<div class="ability-diviser"></div>
+							
+							<table class="alt">
+								<h3>Approximating the BPM</h3>
+								<tbody>
+									<tr>
+										<td style="width: 10em;">Tap recordings</td>
+										<td>Invoked through "Add Recording". Counts the space-bar-button presses over a given sample duration.</td>
+									</tr>
+									<tr>
+										<td style="width: 10m;">Automatic</td>
+										<td>Divides the audio track into bands of frequencies. Compares the energy changes over a time lag. 
+											(Works better the more emphasized the rhythm is)</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td style="padding-top:0px; width: 5em; font-size: 90%;">(See figure below)</td>
+									</tr>
+								</tfoot>
+							</table>
 
-								<table class="alt">
-									<h3>Approximating the BPM</h3>
-									<tbody>
-										<tr>
-											<td style="width: 10em;">Tap recordings</td>
-											<td>Invoked through "Add Recording". Counts the space-bar-button presses over a given sample duration.</td>
-										</tr>
-										<tr>
-											<td style="width: 10m;">Automatic</td>
-											<td>Divides the audio track into bands of frequencies. Compares the energy changes over a time lag. 
-												(Works better the more emphasized the rhythm is)</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td style="padding-top:0px; width: 5em; font-size: 90%;">(See figure below)</td>
-										</tr>
-									</tfoot>
-								</table>
-
-							<section>
-								<p>To improve the "feel" of the rhythm, the tool suggests the use of an animation curve to modify the return value between two beats - it can be used to widen the input window 
+							<div>
+								<p align="justify">
+									To improve the "feel" of the rhythm, the tool suggests the use of an animation curve to modify the return value between two beats - it can be used to widen the input window 
 									or to create easing for visual effects.
 								</p>
-								<img class="expandable-img" src = "images/SoundEditor_Rhythm_config.png" alt="" style ="width:50%;height:50%;"/>
-								<sub style="display: block;">Configuring the rhythm.</sub>
-							</section>
+								<div class="row">
+									<img class="expandable-img" src = "images/SoundEditor_Rhythm_config.png" alt="" style ="width:48%;height:48%;"/>
+								</div>
+								<sub>Configuring the rhythm.</sub>
+							</div>
 						</div>
 
 						<div class="inner">
@@ -153,7 +154,7 @@
 				<footer id="footer">
 					<div class="inner">
 						<ul class="copyright">
-							<li>&copy; Yassine Boutaouas 2023. All rights reserved</li><li>Get in touch: <a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Yassine Boutaouas 2024. All rights reserved</li><li>Get in touch: <a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</div>
 				</footer>

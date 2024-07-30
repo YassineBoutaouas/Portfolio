@@ -11,6 +11,15 @@ let abilitiesButton = document.getElementById("checkbox-abilities");
 var $projectstab = document.getElementById("projects-tab");
 var $abilitiestab = document.getElementById("abilities-tab");
 
+let editorComponents = document.getElementById("detail-img");
+const editorElements = [
+	document.getElementById("img_0"),
+	document.getElementById("img_1"),
+	document.getElementById("img_2"),
+	document.getElementById("img_3"),
+	document.getElementById("img_4"),
+];
+
 window.onscroll = function() {scrollFunction()};
 scrollButton.onclick = toTopFunction;
 
@@ -19,11 +28,13 @@ if(projectsButton !== null)
 if(abilitiesButton !== null)
 	abilitiesButton.onclick = toggleAbilities;
 
+if(editorComponents !== null)
+	editorComponents.onclick = toggleEditorComponentImages;
+
 (function($) {
 
 	var	$window = $(window),
 		$body = $('body');
-
 
 	// Breakpoints.
 		breakpoints({
@@ -198,7 +209,7 @@ if(abilitiesButton !== null)
 
 			});
 
-
+			bindCollapsibles();
 
 })(jQuery);
 
@@ -235,4 +246,75 @@ function toggleAbilities(){
 
 	$projectstab.style.display = 'none';
 	$abilitiestab.style.display = 'flex';
+}
+
+function toggleEditorComponentImages(event){
+	var rect = event.target.getBoundingClientRect();
+
+	let relativePosX = (event.clientX - rect.left) / rect.width;
+    let relativePosY = (event.clientY - rect.top) / rect.height;
+
+	console.log("x: " + relativePosX + ", y:" + relativePosY);
+
+	if(relativePosX < 0.15) {
+		for(let i = 0; i < 5; i++){
+			editorElements[i].style.display = 'none';
+		}
+
+		editorElements[4].style.display = 'block';
+		return;
+	}
+
+	if(relativePosX > 0.7 && relativePosY < 0.6) {
+		for(let i = 0; i < 5; i++){
+			editorElements[i].style.display = 'none';
+		}
+
+		editorElements[2].style.display = 'block';
+		return;
+	}
+
+	if(relativePosX > 0.7 && relativePosY > 0.4) {
+		for(let i = 0; i < 5; i++){
+			editorElements[i].style.display = 'none';
+		}
+
+		editorElements[3].style.display = 'block';
+		return;
+	}
+
+	if(relativePosX > 0.15 && relativePosX < 0.7 && relativePosY > 0.7) {
+		for(let i = 0; i < 5; i++){
+			editorElements[i].style.display = 'none';
+		}
+
+		editorElements[1].style.display = 'block';
+		return;
+	}
+
+	for(let i = 0; i < 5; i++){
+		editorElements[i].style.display = 'none';
+	}
+
+	editorElements[0].style.display = 'block';
+}
+
+function toggleFoldout() {
+}
+
+function bindCollapsibles(){
+	var coll = document.getElementsByClassName("collapsible");
+
+	for (var i = 0; i < coll.length; i++) {
+	  	coll[i].addEventListener("click", function() {
+	  	  var content = this.nextElementSibling;
+			this.classList.toggle("active-collapsible");
+			
+			if (content.style.maxHeight){
+				content.style.maxHeight = null;
+			} else {
+				content.style.maxHeight = content.scrollHeight + "px";
+			}
+	  	});
+	}	
 }

@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Render-Engine</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!--Top Bar-->
+				<div id="top-bar">
+					<div class="inner">
+						<a id="top-bar-icon" href="home.html" class="icon solid style2 fa-home"><span class="label">Get in touch</span></a>
+						<a id="top-bar-icon" href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+						<a id="top-bar-icon" href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+						<a id="top-bar-icon" href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
+					</div>
+				</div>
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="title">Projects</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+					<button name="scrollback" id="scrollback" title="Back to top"></button>
+
+					<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li style="display: flex; flex-direction: row;">
+								<a style="padding-right: 20%;" href="home.html">About Me</a>
+								<a href="mailto:y.boutaouas@gmail.com" class="icon solid style2 fa-envelope"><span class="label">Email</span></a>
+								<a href="https://github.com/YassineBoutaouas" class="icon brands style2 fa-github"><span class="label">GitHub</span></a>
+								<a href="https://www.linkedin.com/in/yassineboutaouas/" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a>
+							</li>
+							<li><a href="index.html">Projects</a></li>
+							<li style="text-indent: 12%;"><a href="goap.html">Goal-Oriented Action Planning</a></li>
+							<li style="text-indent: 12%;"><a href="renderengine.html">3D Render Engine</a></li>
+							<li style="text-indent: 12%;"><a href="crowdsimulation.html">Crowd Simulation</a></li>
+							<li style="text-indent: 12%;"><a href="gameplay.html">Gameplay Programming</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>3D Render Engine</h1>
+							<span class="image main"><img src="images/RenderEngine_Banner.png" alt="" /></span>
+							<p align = "justify">
+								This project contains a realtime 3D renderer. It provides an .obj file-parser, an interactive 3D viewport and supports an entity-component-workflow.
+								The aim of the project is to learn about various rendering concepts and realtime 3D application-workflows.
+							</p>
+							<p align = "justify">
+								The project is written in C++, whereas shaders are written in GLSL.
+								It uses <a href="https://www.opengl.org/">OpenGL</a> along with <a href="https://github.com/ocornut/imgui">Dear ImGUI</a>, <a href="https://www.glfw.org/">glfw</a> and the <a href="https://www.opengl.org/sdk/libs/GLM/">glm-math</a> library. 
+							</p>
+
+							<div class="ability-diviser"></div>
+
+							<h3> Editor components </h3>
+							<p align = "justify">
+								An overview of all the editor components shown in the GUI. 
+								The editor aims to provide simple functionalities and acess to the underlying structures. 
+								Click on the individual panels in the image to examine the editor (with an explanation provided below the image).
+							</p>
+
+							<div id="detail-img" style ="width:75%;height:75%;">
+
+								<div id="img_0" style="position: relative;">
+									<img class="pulsating-img" src="images/Render_Editor_Components_Pulsating.png"/>
+									<img src="images/Render_EditorComponents_0.png" style="width: 100%;height:100%;"/>
+								</div>
+
+								<div id="img_1" style ="display: none;">
+									<img src="images/Renderer_ConsoleTab.png" style ="width: 100%; height: 100%;"/>
+									<p align = "justify">
+										The console prints messages, errors and warnings. The metrics window displays the current fps, which is not shown in current image. 
+									</p>
+								</div>
+
+								<div id="img_2" style ="display: none;">
+									<img src="images/Renderer_InspectorView.png" style ="width: 100%; height: 100%;"/>
+									<p align = "justify">
+										The inspector panel accesses a UI-registry and renders each arbitrary component currently held by the selected entity and provides access to them. 
+										Such components are: Transform, DirectionalLight, Camera, Mesh (which includes the material properties and textures). 
+										Components such as physics components for example can be added to the project and rendered in the inspector as well.
+									</p>
+								</div>
+
+								<div id="img_3" style ="display: none;">
+									<img src="images/Renderer_PostProcessingTab.png" style ="width: 100%; height: 100%;"/>
+									<p align = "justify">
+										The post-processing panel grants access to various post-processing and rendering effects. 
+										The current post-processing stack includes post-exposure, shadow rendering, and bloom. 
+										Additionally, it displays the current skybox texture.
+									</p>
+								</div>
+
+								<div id="img_4" style ="display: none;">
+									<img src="images/Renderer_SceneTab.png" style ="width: 100%; height: 100%;"/>
+									<p align = "justify">
+										The scene hierarchy panel displays a list of all the entities within the current scene. Each entity can be selected and 
+										modified in the inspector panel. A scene contains entities and components. In turn, each entity holds an arbitrary list of components. 
+										Related scenes, entities, and components can cross-reference each other.
+									</p>
+								</div>
+							</div>
+
+							<div class="ability-diviser"></div>
+
+							<div>
+								<h3>The renderer and its features</h3>
+								<p align = "justify">
+									The forward renderer provides a shader-material workflow which 
+									stores arbitrary uniform data in a buffer. Material properties can then be modified in the inspector. 
+									The project provides a pbr shader (incl. IBL) and a toon shader.
+								</p>
+																
+								<section>
+									<video autoplay loop muted playsinline src="videos/Building_Scene.mp4" width="80%" height="80%" controls ="controls"></video>
+								</section>
+								<sub style="margin-left: 5px; display: block;">Creating a scene.</sub>
+
+							</div>
+
+							<div class="ability-diviser"></div>
+
+							<div>
+								<h3>Future Considerations</h3>
+								<p align = "justify">
+									In the current state of the render engine there are a lot of aspects and features that have to be considered. 
+									The most important ones are related to performance and usability. 
+									Other aspects that are important as well such as render-batching, an improved post-processing stack or added 
+									rendering features like reflections or raytracing may be considered later.
+								</p>
+								<div>
+									<embed id="renderengine-mindmap" src="images/RenderEngine-ToDo.pdf" type="application/pdf" width="100%" height="800px"/>
+									<sub>Most important improvements that have to be considered.</sub>
+								</div>
+
+							</div>
+
+							<div class="ability-diviser"></div>
+							<div>
+								<button type="button" class="collapsible">Third party assets</button>
+								<div class="collapsible-content">
+									<table class="alt">
+										<tr>
+											<td><a href="https://www.glfw.org/">[1]</a> glfw - Window Creation</td>
+										</tr>
+										<tr>
+											<td><a href="https://github.com/ocornut/imgui">[2]</a> Dear ImGUI - UI Solution</td>
+										</tr>
+										<tr>
+											<td><a href="https://www.opengl.org/sdk/libs/GLM/">[3]</a> glm - Math Library</td>
+										</tr>
+										<tr>
+											<td><a href="https://polyhaven.com/a/round_wooden_table_01">[4]</a> Table - Model and Textures</td>
+										</tr>
+										<tr>
+											<td><a href="https://polyhaven.com/a/brass_goblets">[5]</a> Goblets - Model and Textures</td>
+										</tr>
+										<tr>
+											<td><a href="https://polyhaven.com/a/chinese_chandelier">[6]</a> Chandelier - Model and Textures</td>
+										</tr>
+										<tr>
+											<td><a href="https://sketchfab.com/3d-models/damaged-helmet-a1de6f1e738d446da3d50a3eebffe883">[7]</a> Helmet - Model and Textures</td>
+										</tr>
+										<tr>
+											<td><a href="https://polyhaven.com/a/coral_stone_wall">[8]</a> Stone Wall Texture</td>
+										</tr>
+										<tr>
+											<td><a href="https://polyhaven.com/a/tief_etz">[9]</a> Forest HDRI Texture</td>
+										</tr>
+										<tr>
+											<td><a href="https://polyhaven.com/a/sunflowers_puresky">[10]</a> Sunflowers (Pure Sky) HDRI Texture</td>
+										</tr>
+										<tr>
+											<td>Yellow Robot - Semester Project - Yassine Boutaouas</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="inner" style="margin-top: 5em;">
+							<h4>To the project:</h4>
+							<blockquote>GitHub Link available soon</blockquote>
+						</div>
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<div class="inner">
+						<ul class="copyright">
+							<li>&copy; Yassine Boutaouas 2024. All rights reserved</li><li>Get in touch: <a href="mailto:y.boutaouas@gmail.com">y.boutaouas@gmail.com</a></li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+	</body>
+</html>
